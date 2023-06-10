@@ -49,3 +49,50 @@ body{
   font-family:"Source Sans Pro", sans-serif;
   color:#2f3640;
 }
+
+.hidden{
+    display:none
+}
+
+.sticky {
+    position: sticky;
+  }
+  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding:10px;
+    border-bottom:1px solid whitesmoke;
+}
+  
+.navbar-item {
+    display: flex;
+    align-items: center;
+}
+  
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 80px;
+}
+  
+#navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+#navbar-links a{
+    margin-right:30px;
+    text-decoration: none;
+}
+
+#navbar-links button{
+    margin-right:100px;
+}
+
+header {
+    margin:80px 180px;
+    font-size:40px
+}
