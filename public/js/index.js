@@ -50,13 +50,12 @@ const urlLocationHandler = () => {
 window.addEventListener("popstate", urlLocationHandler);
 window.addEventListener("load", urlLocationHandler); */
 
-import { Home, Diary1, Diary2, Diary3, NotFound } from "./components.js";
+import { Diary1, Diary2, Diary3, NotFound } from "./components.js";
 
 const $root = document.getElementById("root");
 const $navigation = document.getElementById("navigation");
 
 const routes = [
-  { path: "/", component: Home },
   { path: "/diary1", component: Diary1 },
   { path: "/diary2", component: Diary2 },
   { path: "/diary3", component: Diary3 },
@@ -88,7 +87,6 @@ $navigation.addEventListener("click", (e) => {
 });
 
 window.addEventListener("popstate", () => {
-  console.log("[popstate]", window.location.pathname);
   render();
 });
 
