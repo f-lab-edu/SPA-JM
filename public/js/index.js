@@ -82,7 +82,7 @@ $navigation.addEventListener("click", (e) => {
 
   if (window.location.pathname === path) return;
 
-  window.history.pushState(null, null, path);
+  window.history.pushState({}, "", path);
   render(path);
 });
 
