@@ -178,3 +178,8 @@ header {
   margin: 80px 180px;
   font-size: 40px;
 }
+
+img {
+  width: 200px;
+  height: 200px;
+}
