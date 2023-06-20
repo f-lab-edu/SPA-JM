@@ -1,7 +1,6 @@
 import { Home, Diary1, Diary2, Diary3, NotFound } from "./components.js";
 
 const $root = document.getElementById("root");
-const $navigation = document.getElementById("navigation");
 
 const routes = [
   { path: "/", component: Home },
@@ -16,19 +15,19 @@ const render = async (path) => {
   try {
     const component =
       routes.find((route) => route.path === _path)?.component || NotFound;
-    console.log(component());
     $root.replaceChildren(await component());
   } catch (err) {
     console.error(err);
   }
 };
 
-$navigation.addEventListener("click", (e) => {
-  if (!e.target.matches(".nav-link")) return;
+$root.addEventListener("click", (e) => {
+  const target = e.target.closest(".nav-link");
+  if (!target) return;
 
   e.preventDefault();
 
-  const path = e.target.getAttribute("href");
+  const path = target.getAttribute("href");
 
   if (window.location.pathname === path) return;
 

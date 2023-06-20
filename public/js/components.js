@@ -19,19 +19,21 @@ export const Home = async () => {
       ${diaryList
         .map(
           (diary) => `
-        <div class="diary-item">
-          <img src="img/2.jpg" alt="${title}" />
-          <h1>${diary.content}</h1>
-          <p>${diary.detail}</p>
-        </div>
-      `
+          <nav id="navigation">
+            <a href="${diary.path}" class="nav-link">
+              <img src="img/2.jpg" alt="${diary.title}" />
+              <h1>${diary.title}</h1>
+              <p>${diary.content}</p>
+            </a>
+          </nav>
+        `
         )
         .join("")}
     </div>
-
   `);
-  $diary.addEventListener("click", () => {
-    window.location.href = "/";
+
+  $diary.addEventListener("click", (e) => {
+    window.location.href = e.target.getAttribute("href");
   });
 
   return $diary;
