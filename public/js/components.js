@@ -10,13 +10,44 @@ const fetchData = async (url) => {
   return json;
 };
 
-export const Diary1 = async () => {
-  const { title, content, imageUrl } = await fetchData("/data/Diary1.json");
+export const Home = async () => {
+  const { title, diaryList } = await fetchData("/data/Home.json");
+
   const $diary = createElement(`
     <div class="diary">
+      <header>${title}</header>
+      ${diaryList
+        .map(
+          (diary) => `
+          <nav id="navigation">
+            <a href="${diary.path}" class="nav-link">
+              <img src="img/2.jpg" alt="${diary.title}" />
+              <h1>${diary.title}</h1>
+              <p>${diary.content}</p>
+            </a>
+          </nav>
+        `
+        )
+        .join("")}
+    </div>
+  `);
+
+  $diary.addEventListener("click", (e) => {
+    window.location.href = e.target.getAttribute("href");
+  });
+
+  return $diary;
+};
+
+export const Diary1 = async () => {
+  const { title, content, detail } = await fetchData("/data/Diary1.json");
+
+  const $diary = createElement(`
+    <div class="diary">
+      <header>${title}</header>
       <img src="img/2.jpg" alt="${title}" />
-      <h1>${title}</h1>
-      <p>${content}</p>
+      <h1>${content}</h1>
+      <p>${detail}</p>
     </div>
   `);
 

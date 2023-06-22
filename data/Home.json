@@ -1,0 +1,23 @@
+{
+  "title": "Diary",
+  "diaryList": [
+    {
+      "path": "/diary1",
+      "title": "Diary1",
+      "content": "This is Diary1 page",
+      "detail": "My brother is dancing"
+    },
+    {
+      "path": "/diary2",
+      "title": "Diary2",
+      "content": "This is Diary2 page",
+      "detail": "My brother is singing"
+    },
+    {
+      "path": "/diary3",
+      "title": "Diary3",
+      "content": "This is Diary3 page",
+      "detail": "My brother is studying"
+    }
+  ]
+}
