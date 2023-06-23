@@ -30,7 +30,7 @@ const render = async (path) => {
 };
 
 $root.addEventListener("click", (e) => {
-  const target = e.target.closest(".nav-link");
+  const target = e.target.parentElement;
   if (!target) return;
 
   e.preventDefault();

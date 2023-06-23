@@ -34,10 +34,6 @@ export const Home = async () => {
     </div>
   `);
 
-  $diary.addEventListener("click", (e) => {
-    window.location.href = e.target.getAttribute("href");
-  });
-
   return $diary;
 };
 
