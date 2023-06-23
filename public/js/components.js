@@ -21,9 +21,11 @@ export const Home = async () => {
           (diary) => `
           <nav id="navigation">
             <a href="${diary.path}" class="nav-link">
-              <img src="img/2.jpg" alt="${diary.title}" />
-              <h1>${diary.title}</h1>
-              <p>${diary.content}</p>
+              <img class="diary-left" src="img/${diary.id}.jpg" alt="${diary.title}" />
+              <div class="diary-right">
+                <h1>${diary.title}</h1>
+                <p>${diary.content}</p>
+              </div>
             </a>
           </nav>
         `
@@ -31,10 +33,6 @@ export const Home = async () => {
         .join("")}
     </div>
   `);
-
-  $diary.addEventListener("click", (e) => {
-    window.location.href = e.target.getAttribute("href");
-  });
 
   return $diary;
 };
@@ -45,7 +43,7 @@ export const Diary1 = async () => {
   const $diary = createElement(`
     <div class="diary">
       <header>${title}</header>
-      <img src="img/2.jpg" alt="${title}" />
+      <img src="img/1.jpg" alt="${title}" />
       <h1>${content}</h1>
       <p>${detail}</p>
     </div>
@@ -59,13 +57,60 @@ export const Diary1 = async () => {
 };
 
 export const Diary2 = async () => {
-  const { title, content } = await fetchData("/data/Diary2.json");
-  return createElement(`<h1>${title}</h1>`);
+  const { title, content, detail } = await fetchData("/data/Diary2.json");
+
+  const $diary = createElement(`
+    <div class="diary">
+      <header>${title}</header>
+      <img src="img/2.jpg" alt="${title}" />
+      <h1>${content}</h1>
+      <p>${detail}</p>
+    </div>
+  `);
+
+  $diary.addEventListener("click", () => {
+    window.location.href = "/diary2";
+  });
+
+  return $diary;
 };
 
 export const Diary3 = async () => {
-  const { title, content } = await fetchData("/data/Diary3.json");
-  return createElement(`<h1>${title}</h1><p>${content}</p>`);
+  const { title, content, detail } = await fetchData("/data/Diary1.json");
+
+  const $diary = createElement(`
+    <div class="diary">
+      <header>${title}</header>
+      <img src="img/3.jpg" alt="${title}" />
+      <h1>${content}</h1>
+      <p>${detail}</p>
+    </div>
+  `);
+
+  $diary.addEventListener("click", () => {
+    window.location.href = "/diary3";
+  });
+
+  return $diary;
+};
+
+export const Diary4 = async () => {
+  const { title, content, detail } = await fetchData("/data/Diary4.json");
+
+  const $diary = createElement(`
+    <div class="diary">
+      <header>${title}</header>
+      <img src="img/4.jpg" alt="${title}" />
+      <h1>${content}</h1>
+      <p>${detail}</p>
+    </div>
+  `);
+
+  $diary.addEventListener("click", () => {
+    window.location.href = "/diary4";
+  });
+
+  return $diary;
 };
 
 export const NotFound = () => createElement("<h1>404 NotFound</h1>");

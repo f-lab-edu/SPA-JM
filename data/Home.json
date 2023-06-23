@@ -2,22 +2,32 @@
   "title": "Diary",
   "diaryList": [
     {
+      "id": 1,
       "path": "/diary1",
       "title": "Diary1",
       "content": "This is Diary1 page",
       "detail": "My brother is dancing"
     },
     {
+      "id": 2,
       "path": "/diary2",
       "title": "Diary2",
       "content": "This is Diary2 page",
       "detail": "My brother is singing"
     },
     {
+      "id": 3,
       "path": "/diary3",
       "title": "Diary3",
       "content": "This is Diary3 page",
       "detail": "My brother is studying"
+    },
+    {
+      "id": 4,
+      "path": "/diary4",
+      "title": "Diary4",
+      "content": "This is Diary4 page",
+      "detail": "My brother is fishing"
     }
   ]
 }

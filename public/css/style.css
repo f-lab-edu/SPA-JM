@@ -182,4 +182,41 @@ header {
 img {
   width: 200px;
   height: 200px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.diary-left {
+  float: left;
+}
+.diary-right {
+  float: left;
+}
+
+.nav-link h1 {
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link img {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.nav-link:hover h1 {
+  color: skyblue;
+}
+
+.nav-link:hover img {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

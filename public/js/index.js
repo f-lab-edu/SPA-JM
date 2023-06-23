@@ -1,4 +1,11 @@
-import { Home, Diary1, Diary2, Diary3, NotFound } from "./components.js";
+import {
+  Home,
+  Diary1,
+  Diary2,
+  Diary3,
+  Diary4,
+  NotFound,
+} from "./components.js";
 
 const $root = document.getElementById("root");
 
@@ -7,6 +14,7 @@ const routes = [
   { path: "/diary1", component: Diary1 },
   { path: "/diary2", component: Diary2 },
   { path: "/diary3", component: Diary3 },
+  { path: "/diary4", component: Diary4 },
 ];
 
 const render = async (path) => {
@@ -22,7 +30,7 @@ const render = async (path) => {
 };
 
 $root.addEventListener("click", (e) => {
-  const target = e.target.closest(".nav-link");
+  const target = e.target.parentElement;
   if (!target) return;
 
   e.preventDefault();

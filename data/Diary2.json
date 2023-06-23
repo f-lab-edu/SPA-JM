@@ -1,1 +1,6 @@
-{"title" : "Diary2","content" : "This is Diary2 page"}
+{
+  "id": 2,
+  "title": "Diary2",
+  "content": "This is Diary2 page",
+  "detail": "My brother is dancing"
+}
