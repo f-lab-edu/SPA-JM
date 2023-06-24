@@ -137,6 +137,8 @@ body {
 
 .sticky {
   position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .navbar {
@@ -146,6 +148,7 @@ body {
   height: 60px;
   padding: 10px;
   border-bottom: 1px solid whitesmoke;
+  background-color: white;
 }
 
 .navbar-item {

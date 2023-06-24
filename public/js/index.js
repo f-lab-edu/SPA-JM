@@ -18,7 +18,7 @@ const routes = [
 ];
 
 const render = async (path) => {
-  const _path = path ?? window.location.pathname; //a가 클릭되면 href가 path로 전달??
+  const _path = path ?? window.location.pathname;
 
   try {
     const component =
